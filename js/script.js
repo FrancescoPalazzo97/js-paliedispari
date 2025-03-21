@@ -16,3 +16,11 @@ let word = prompt(`Inserisci una parola`); // Faccio inserire la parola all'uten
 let reversedWord = reverseString (word); // Richiamo la funzione per invertire la stringa
 palindrome (word, reversedWord); // Richiamo la funzione
 //FINE ESERCIZIO
+
+//-------------------------------------------------
+
+// SECONDO ESERCIZIO
+// Pari e Dispari
+function randomNum (min, max){ // Creo una funzione per generare un numero casuale compreso compreso tra min e max
+    return Math.floor(Math.random() * (max- min) + min) + 1; // Ritorno il valore generato
+} // Fine funzione
