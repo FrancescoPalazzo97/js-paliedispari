@@ -43,7 +43,14 @@ function result (flag, z){// Creo una funzione che mi mostra il risultato
 
 function sumNumbers (x, y, z){ // creo una funzione che mi somma i 2 valori in più gli passo anche la scelta di pari o dispari fatta dall'utente
     let sum = x + y; // sommo i 2 numeri
+    console.log(`La somma è: ${sum}`);
     let check = evenOdd (sum);// richiamo la funzione che mi restituisce se le somma sia pari o dispari
     result (check, z);// Richiamo la funzione che mi mostra i risultati
 }
 
+let myChoice = prompt(`Scegli tra pari o dispari`); //Faccio fare la scelta all'utente
+let myNum = parseInt(prompt(`Inserisci un numero compreso tra 1 e 5`)); // Gli faccio scegliere il suo numero
+let pcNum = parseInt(randomNum(1,5)); // Richoamo la funzione per generare il numero del computer
+console.log(`${myNum} - ${pcNum} - ${myChoice}`);
+sumNumbers(myNum, pcNum , myChoice); //Richiamo la funzione che stamperà i risultati
+//Fine esercizio
