@@ -23,4 +23,27 @@ palindrome (word, reversedWord); // Richiamo la funzione
 // Pari e Dispari
 function randomNum (min, max){ // Creo una funzione per generare un numero casuale compreso compreso tra min e max
     return Math.floor(Math.random() * (max- min) + min) + 1; // Ritorno il valore generato
-} // Fine funzione
+} // Fine funzione randomNum
+
+function evenOdd (num){ // Creo una funzione che mi verifica se un numero è pari o dispari
+    if (num % 2 === 0){// Se è pari
+        return true; // Ritorno il valore true
+    } else {// Altrimenti
+        return false;// false
+    }// Fine blocco if
+}// fine funzione evenOdd
+
+function result (flag, z){// Creo una funzione che mi mostra il risultato
+    if ((z === `pari` && flag) || (z === `dispari` && !flag)){ // Se l'utente indovina
+        console.log(`Indovinato\nHai vinto`);// Ha vinto
+    } else { // Altrimenti
+        console.log(`Non hai indovianto\nHai perso`);// Ha perso
+    }
+}
+
+function sumNumbers (x, y, z){ // creo una funzione che mi somma i 2 valori in più gli passo anche la scelta di pari o dispari fatta dall'utente
+    let sum = x + y; // sommo i 2 numeri
+    let check = evenOdd (sum);// richiamo la funzione che mi restituisce se le somma sia pari o dispari
+    result (check, z);// Richiamo la funzione che mi mostra i risultati
+}
+
